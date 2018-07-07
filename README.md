@@ -28,13 +28,14 @@ From build directory:
 
 Package
 -------
-[CPack](https://cmake.org/Wiki/CMake:Packaging_With_CPack) is configured for
-packaging __pega-texto-memory__. From build directory, after building:
+[CPack](https://gitlab.kitware.com/cmake/community/wikis/doc/cpack/Packaging-With-CPack)
+is configured for packaging __pega-texto-memory__. From build directory, after
+building:
 
 	$ cpack
 
 By default, it uses the TGZ, STGZ and TZ generators. You may override this with
-other [available generators](https://cmake.org/Wiki/CMake:CPackPackageGenerators)
+other [available generators](https://gitlab.kitware.com/cmake/community/wikis/doc/cpack/PackageGenerators)
 if you want:
 
 	$ cpack -DCPACK_GENERATOR=<generator>

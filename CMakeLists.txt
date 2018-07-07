@@ -20,6 +20,7 @@ add_definitions(-DPROJECT_VERSION="${PROJECT_VERSION}")
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake")
 find_package(Judy REQUIRED)
+find_package(PegaTexto 2 REQUIRED)
 
 # Build stuff
 option(BUILD_SHARED_LIBS "Build as a shared library" ON)
@@ -34,11 +35,6 @@ add_subdirectory(src)
 # if(COMPILE_EXAMPLES)
 	# add_subdirectory(examples)
 # endif()
-
-# # Install header
-configure_file("src/pega-texto-memory.h" "pega-texto-memory.h" @ONLY)
-install(FILES "${CMAKE_CURRENT_BINARY_DIR}/pega-texto-memory.h" DESTINATION "include")
-
 
 # CPack packaging
 include(InstallRequiredSystemLibraries)

@@ -31,16 +31,13 @@ extern "C" {
 
 /**
  * Structure with memory usage statistics about pega-texto.
- *
- * @note The byte counts represent deep memory usage, so the sum of the partial
- * byte counts will be greater than `total_byte_count`.
  */
 typedef struct pt_memory {
 	/// Total memory count.
 	int total_byte_count;
-	/// Expression memory count.
+	/// Expression structures memory count.
 	int expression_byte_count;
-	/// Grammar memory count.
+	/// Grammar structures memory count.
 	int grammar_byte_count;
 	/// Array memory count.
 	int array_byte_count;
@@ -114,7 +111,7 @@ int pt_memory_track_expr(pt_memory_tracker *memtracker, pt_expr *expr);
 int pt_memory_track_grammar(pt_memory_tracker *memtracker, pt_grammar *grammar);
 
 /// Pega-texto-memory version string
-#define PT_MEMORY_VERSION "@PROJECT_VERSION@"
+#define PT_MEMORY_VERSION "0.1.0"
 
 #ifdef __cplusplus
 }
