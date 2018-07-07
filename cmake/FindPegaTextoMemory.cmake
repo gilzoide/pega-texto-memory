@@ -12,7 +12,7 @@ find_path(PEGA_TEXTO_MEMORY_INCLUDE_DIRS
 	PATH_SUFFIXES pega-texto-memory/include)
 
 find_library(PEGA_TEXTO_MEMORY_LIBRARIES
-	NAMES pega-texto-memory pega-texto-memory2 pega-texto-memory1
+	NAMES pega-texto-memory pega-texto-memory0
 	PATH_SUFFIXES pega-texto-memory/lib)
 
 # find library version in header file

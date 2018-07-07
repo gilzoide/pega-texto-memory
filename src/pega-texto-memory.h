@@ -23,6 +23,9 @@
 #ifndef __PEGA_TEXTO_MEMORY_H__
 #define __PEGA_TEXTO_MEMORY_H__
 
+/// Pega-texto-memory version string
+#define PT_MEMORY_VERSION "0.1.0"
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -109,9 +112,6 @@ int pt_memory_track_expr(pt_memory_tracker *memtracker, pt_expr *expr);
  * @return Number of bytes used by Grammar.
  */
 int pt_memory_track_grammar(pt_memory_tracker *memtracker, pt_grammar *grammar);
-
-/// Pega-texto-memory version string
-#define PT_MEMORY_VERSION "0.1.0"
 
 #ifdef __cplusplus
 }
