@@ -24,17 +24,12 @@ find_package(PegaTexto 2 REQUIRED)
 
 # Build stuff
 option(BUILD_SHARED_LIBS "Build as a shared library" ON)
+option(COMPILE_EXAMPLE "Compile the example" OFF)
 if(UNIX)
 	option(LINK_SONAME_FILE "Create an additional symlink and pkg-config script for library based on it's SONAME" ON)
 endif()
 add_subdirectory(src)
-# add_subdirectory(pkg-config)
-
-# # Examples
-# option(COMPILE_EXAMPLES "Compile the examples" OFF)
-# if(COMPILE_EXAMPLES)
-	# add_subdirectory(examples)
-# endif()
+add_subdirectory(pkg-config)
 
 # CPack packaging
 include(InstallRequiredSystemLibraries)

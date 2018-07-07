@@ -13,8 +13,10 @@ set_target_properties(pega-texto-memory PROPERTIES
 	VERSION "${PROJECT_VERSION}"
 	SOVERSION "${PROJECT_SOVERSION}")
 
-add_executable(test main.c)
-target_link_libraries(test pega-texto-memory)
+if(COMPILE_EXAMPLE)
+	add_executable(test main.c)
+	target_link_libraries(test pega-texto-memory)
+endif()
 
 if(UNIX AND BUILD_SHARED_LIBS AND LINK_SONAME_FILE)
 	if(APPLE)

@@ -1,0 +1,9 @@
+prefix=@CMAKE_INSTALL_PREFIX@
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+Name: pega-texto-memory
+Description: Memory usage statistics for the pega-texto PEG runtime engine
+Version: @PROJECT_VERSION@
+Cflags: -I${includedir}
+Libs: -L${libdir} -lpega-texto-memory@WITH_SOVERSION@
